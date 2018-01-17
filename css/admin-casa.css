@@ -1,0 +1,53 @@
+/*Settings page styles.*/
+#custom-type-list { margin: 20px 0; }
+#custom-type-list li {
+	border: 1px solid #ddd;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color:#f7f7f7;
+	max-width: 400px;
+	padding: 10px;
+	cursor: move;
+}
+#loading-animation { display: none; }
+
+/* Field styles */
+.casa-row {
+	border-bottom: 1px solid #e9e9e9;
+	padding: 20px;
+}
+.casa-th {
+	display: inline-block;
+	float: left;
+	width: 25%;
+	font-weight: bold;
+}
+.casa-tr {
+	display: inline-block;
+	float: right;
+	width: 75%;
+}
+.casa {
+	margin-top: 20px;
+}
+
+.casa-row-content{
+	border-radius: 5px;
+	min-width: 550px;
+}
+
+.casa-textarea {
+	height: 70px;
+	width: 530px;
+	padding: 5px;
+	resize: none;
+}
+
+.quicktags-toolbar {
+	margin-bottom: 5px;
+	display: inline-block;
+	float: left;
+	background: #ffffff !important;
+	border-bottom: none !important;
+}
