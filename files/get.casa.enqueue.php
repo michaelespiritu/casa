@@ -33,7 +33,7 @@ add_action( 'admin_enqueue_scripts', 'casa_admin_enqueue' );
 function casa_enqueue(){
 
     if ( get_post_type() == 'casa' ) {
-      wp_enqueue_style( 'casa-css', plugins_url( 'css/casa.css', __DIR__ ), '', '0151' );
+      wp_enqueue_style( 'casa-css', plugins_url( 'css/casa.css', __DIR__ ), '', '0310' );
     }
 		wp_enqueue_script( 'casa-image-show', plugins_url( 'js/image-slider-show.js', __DIR__ ), array( 'jquery' ), '1.0', true );
 		wp_localize_script( 'casa-image-show', 'casaImageUploads', array( 'imageData' => get_post_meta( get_the_ID(), 'casa_image_data', true ) ) );
