@@ -16,8 +16,22 @@
 
 
 /* SINGLE PAGE  */
+.casa-show-property{
+    width: 80%;
+    margin: 0 auto;
+}
+
 .casa-property{
   padding: 10px;
-  width: 50%;
-  margin: 0 auto;
+  width: 59%;
+  float: left;
+}
+
+.casa-sidebar{
+  width: 40%;
+  float: left;
+}
+
+.casa-sidebar .widget-area{
+  width: 100%;
 }

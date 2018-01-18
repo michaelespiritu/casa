@@ -24,4 +24,12 @@ if ( ! defined( 'CASA_DIR' ) ) {
 
 require_once CASA_DIR . '/get.casa.cpt.php';
 require_once CASA_DIR . '/get.casa.fields.php';
+require_once CASA_DIR . '/get.casa.image-slider.php';
 require_once CASA_DIR . '/get.casa.enqueue.php';
+require_once CASA_DIR . '/get.casa.widget.php';
+
+// register Casa_Widget widget
+function register_casa_widget() {
+    register_widget( 'Casa_Widget' );
+}
+add_action( 'widgets_init', 'register_casa_widget' );

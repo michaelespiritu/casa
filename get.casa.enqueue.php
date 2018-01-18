@@ -23,7 +23,7 @@ add_action( 'admin_enqueue_scripts', 'casa_admin_enqueue' );
 function casa_enqueue(){
 
     if ( get_post_type() == 'casa' ) {
-      wp_enqueue_style( 'casa-css', plugins_url( 'css/casa.css', __FILE__ ), '', '1.0' );
+      wp_enqueue_style( 'casa-css', plugins_url( 'css/casa.css', __FILE__ ), '', '011818' );
     }
 
 }
