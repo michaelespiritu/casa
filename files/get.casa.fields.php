@@ -4,7 +4,7 @@ function casa_add_metabox() {
 
 	add_meta_box(
 		'casa_meta',
-		__( 'Casa Listing' ),
+		__( 'Casa Listing' , 'casa-listing'),
 		'casa_meta_callback',
 		'casa',
 		'normal',
@@ -12,6 +12,7 @@ function casa_add_metabox() {
 	);
 
 }
+
 add_action( 'add_meta_boxes', 'casa_add_metabox' );
 
 
@@ -369,6 +370,8 @@ function casa_meta_save( $post_id ) {
 
     $is_valid_nonce = ( isset( $_POST[ 'casa_nonce' ] ) && wp_verify_nonce( $_POST[ 'casa_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
 
+		$casa_stored_meta = get_post_meta( $post_id );
+
     // Exits script depending on save status
     if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
         return;
@@ -442,6 +445,16 @@ function casa_meta_save( $post_id ) {
 		if ( isset( $_POST[ 'casa_contact_email' ] ) ) {
 			update_post_meta( $post_id, 'casa_contact_email', sanitize_text_field( $_POST[ 'casa_contact_email' ] ) );
 		}
+
+		if ( isset( $_POST[ 'custom_image_data' ] ) ) {
+
+			$image_data = json_decode( stripslashes( $_POST[ 'custom_image_data' ] ) );
+
+			update_post_meta( $post_id, 'casa_image_data', $image_data );
+
+
+		}
 }
+
 
 add_action( 'save_post', 'casa_meta_save' );

@@ -6,6 +6,15 @@ $casa_stored_meta = get_post_meta( $post->ID );
 ?>
   <div class="casa-show-property">
 
+      <div class="casa-slider-images">
+
+        <div class="casa-images">
+
+          <button class="casa-btn-slider casa-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="casa-btn-slider casa-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+      </div>
 
       <div class="casa-property" id="casa_<?php esc_attr( the_id() ); ?>">
         <h2><?php _e( get_the_title(), 'casa-listing') ?></h2>

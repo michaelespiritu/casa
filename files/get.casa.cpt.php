@@ -52,7 +52,7 @@ function casa_register_post_type() {
     ),
     'supports'            => array(
     	'title',
-			'thumbnail'
+			//'thumbnail'
     )
 	);
         //Create the post type using the above two varaiables.
@@ -61,19 +61,19 @@ function casa_register_post_type() {
 add_action( 'init', 'casa_register_post_type' );
 
 function casa_load_templates( $original_template ) {
-	
+
 
 			 if(is_singular('casa')) {
            if (  file_exists( get_stylesheet_directory(). '/single-casa.php' ) ) {
                    return get_stylesheet_directory() . '/single-casa.php';
            } else {
-                   return plugin_dir_path( __FILE__ ) . '/templates/single-casa.php';
+                   return plugin_dir_path( __DIR__ ) . '/templates/single-casa.php';
            }
        }else if ( is_archive() || is_search() ) {
              if ( file_exists( get_stylesheet_directory(). '/archive-casa.php' ) ) {
                    return get_stylesheet_directory() . '/archive-casa.php';
              } else {
-                     return plugin_dir_path( __FILE__ ) . '/templates/archive-casa.php';
+                     return plugin_dir_path( __DIR__ ) . '/templates/archive-casa.php';
              }
        }else{
 

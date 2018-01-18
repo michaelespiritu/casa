@@ -19,12 +19,40 @@
 .casa-show-property{
     width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 .casa-property{
   padding: 10px;
   width: 59%;
   float: left;
+  ;
+}
+
+.casa-images{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.casa-image{
+  width: auto;
+  max-width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.casa-btn-slider{
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 15px;
+}
+
+.casa-display-right{
+  right: 40%;
+}
+
+.casa-display-left{
+  left: 40%;
 }
 
 .casa-sidebar{
