@@ -24,6 +24,7 @@ if ( ! defined( 'CASA_DIR' ) ) {
 
 require_once CASA_DIR . '/includes/get.casa.cpt.php';
 require_once CASA_DIR . '/includes/get.casa.fields.php';
+require_once CASA_DIR . '/includes/get.casa.add-columns.php';
 require_once CASA_DIR . '/includes/get.casa.image-slider.php';
 require_once CASA_DIR . '/includes/get.casa.enqueue.php';
 require_once CASA_DIR . '/includes/get.casa.widget.php';
