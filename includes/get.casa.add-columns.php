@@ -1,5 +1,7 @@
 <?php
-
+if ( ! class_exists( 'CasaAddColumn' ) ) {
+	return null;
+}
 
 class CasaAddColumn{
 

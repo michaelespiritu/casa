@@ -1,6 +1,9 @@
 <?php
+if ( ! class_exists( 'CasaRegisterPostTypeAndTemplate' ) ) {
+	return null;
+}
 
-class RegisterPostTypeAndTemplate {
+class CasaRegisterPostTypeAndTemplate {
 
 		function __construct(){
 			add_action( 'init', [ $this, 'casa_register_post_type' ] );
@@ -94,4 +97,4 @@ class RegisterPostTypeAndTemplate {
 }
 
 
-$registerPostTypeAndTemplate = new RegisterPostTypeAndTemplate();
+$casaRegisterPostTypeAndTemplate = new CasaRegisterPostTypeAndTemplate();

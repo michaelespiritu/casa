@@ -1,4 +1,7 @@
 <?php
+if ( ! class_exists( 'CasaImageSlideMetaBox' ) ) {
+	return null;
+}
 
 class CasaImageSlideMetaBox {
 

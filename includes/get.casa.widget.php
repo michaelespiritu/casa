@@ -1,4 +1,10 @@
 <?php
+
+if ( ! class_exists( 'Casa_Widget' ) ) {
+	return null;
+}
+
+
 /**
  * Adds Casa_Widget widget.
  */
@@ -53,7 +59,7 @@ class Casa_Widget extends WP_Widget {
     $the_query = new WP_Query( $arg );
 
     $data = '';
-		
+
     while ( $the_query->have_posts() ) {
   		$the_query->the_post();
   		 $data .= '<li><a href="'. esc_attr( get_permalink() ) .'">' . __( get_the_title() , 'casa-listing') . '</a></li>';

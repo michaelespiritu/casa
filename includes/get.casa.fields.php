@@ -1,4 +1,7 @@
 <?php
+if ( ! class_exists( 'CasaMetaBoxAndFields' ) ) {
+	return null;
+}
 
 class CasaMetaBoxAndFields {
 

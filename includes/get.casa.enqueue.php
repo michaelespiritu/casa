@@ -1,4 +1,7 @@
 <?php
+if ( ! class_exists( 'CasaEnqueue' ) ) {
+	return null;
+}
 
 
 class CasaEnqueue{

@@ -21,7 +21,6 @@ if ( ! defined( 'CASA_DIR' ) ) {
 
 }
 
-
 require_once CASA_DIR . '/includes/get.casa.cpt.php';
 require_once CASA_DIR . '/includes/get.casa.fields.php';
 require_once CASA_DIR . '/includes/get.casa.add-columns.php';
@@ -29,3 +28,13 @@ require_once CASA_DIR . '/includes/get.casa.image-slider.php';
 require_once CASA_DIR . '/includes/get.casa.enqueue.php';
 require_once CASA_DIR . '/includes/get.casa.widget.php';
 require_once CASA_DIR . '/includes/get.casa.widget-init.php';
+
+
+
+function casa_plugin_deactivate(){
+
+  flush_rewrite_rules();
+
+}
+
+register_deactivation_hook( __FILE__, 'casa_plugin_deactivate' );
